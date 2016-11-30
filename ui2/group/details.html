@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+		<title>Group Detail</title>
+
+<link rel="stylesheet" type="text/css" href="../../skins/css/public/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="../../skins/css/public/font-awesome.css" />
+<link rel="stylesheet" type="text/css" href="../../skins/css/public/ui.css" />
+<link rel="stylesheet" type="text/css" href="../../skins/css/public/form.css" />
+<link rel="stylesheet" type="text/css" href="../../skins/css/public/datatables.css" />
+
+<link rel="stylesheet" type="text/css" href="../../skins/css/main/default.css" />
+<link rel="stylesheet" type="text/css" href="../../skins/css/group/details.css" />
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+     		 <script src="<l:asset path='html5shiv.js'/>"></script>
+     		 <script src="<l:asset path='respond.js'/>"></script>
+    	<![endif]-->
+	</head>
+	<body>
+
+<div class="details-header">
+  
+<h3>细节</h3>
+
+</div>
+
+
+<div class="details-container">
+
+<form class="form-horizontal" id="appUpdateForm" role="form">
+                  <div class="form-group">
+                      <label for="groupHref" class="col-sm-2 control-label">资源路径</label>
+                      <div class="col-sm-10">
+                        <a id="groupHref" href="#" class="form-control-static" target="_blank">
+                        </a>                                                
+                    </div>
+                  </div>
+                
+                  <div class="form-group">
+                      <label for="groupId" class="col-sm-2 control-label">资源ID</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control ue-form" id="groupId" name="groupId" value="" disabled="disabled">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                      <label for="directoryHref" class="col-sm-2 control-label">目录</label>
+                      <div class="col-sm-10">
+                        <a id="directoryHref" href="#" class="form-control-static">
+                        </a>                                                
+                    </div>
+                  </div>
+                
+                  <div class="form-group">
+                      <label for="groupName" class="col-sm-2 control-label">组名称</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control ue-form" id="groupName" name="groupName" value="">
+                    </div>
+                  </div>
+                
+                  <div class="form-group">
+                      <label for="groupDes" class="col-sm-2 control-label">描述</label>
+                      <div class="col-sm-10">
+                        <textarea class="form-control ue-form" id="groupDes" name="groupDes" row="2"></textarea>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="groupStatus" class="col-sm-2 control-label">状态</label>
+                    <div class="col-sm-10">
+                      <div id="groupStatus" class="radio">
+                        <label><input type="radio" name="statusRadio" value="enabled" checked>正常</label>
+                        <label><input type="radio" name="statusRadio" value="disabled">禁止</label>
+                      </div>
+                    </div>
+                  </div>
+                
+                  <div class="form-group">
+                      <label for="customData" class="col-sm-2 control-label">自定义数据</label>
+                      <div class="col-sm-10">
+                        <textarea class="form-control ue-form" id="customData" name="customData" row="3" ></textarea>
+                      </div>
+                  </div>                              
+                
+                  <div class="form-group">
+                      <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" id="saveBtn" class="btn ue-btn-primary">保存</button>
+                      </div>
+                  </div>
+              </form>
+  
+</div>
+
+ 
+
+		
+      
+        
+		<!-- 需要引用的JS -->
+  <script type="text/javascript" src="../../skins/js/public/jquery.js"></script>
+  <script type="text/javascript" src="../../skins/js/public/bootstrap.js"></script>
+  <script type="text/javascript" src="../../skins/js/public/jquery.cookie.js"></script>
+  <script type="text/javascript" src="../../skins/js/public/ui.js"></script>
+  <script type="text/javascript" src="../../skins/js/public/form.js"></script>
+  <script type="text/javascript" src="../../skins/js/public/datatables.js"></script>
+  <script type="text/javascript" src="../../skins/js/public/loushang-framework.js"></script>
+
+  <script type="text/javascript" src="../../skins/js/group/details.js"></script>
+	</body>
+</html>

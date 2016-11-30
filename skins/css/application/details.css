@@ -1,0 +1,27 @@
+body {
+	background-color: #f5f5f5;
+}
+
+.view-page-header {
+	padding:10px;
+}
+
+.view-page-container {
+    background-color: #fff;
+    padding: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 560px;
+}
+
+.view-page-form-control{
+	width:30%;
+}
+
+.view-page-form-textarea {
+	width:50%;
+}
+
+.form-group:first-child {
+	margin-top: 20px;
+}

@@ -1,0 +1,14 @@
+{
+	"protocol":"http",
+	"host":"dev.imaicloud.com",
+	"port":"80",
+	"context":"/iam",
+	"tenant":"/v1/tenants/",
+	"application":"/v1/applications/",
+	"organization":"/v1/organizations/",
+	"directory":"/v1/directories/",
+	"group":"/v1/groups/",
+	"account":"/v1/accounts/",
+	"register":"/admin/register",
+	"login":"/admin/login"
+}

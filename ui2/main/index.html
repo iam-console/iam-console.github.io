@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+<title>IAM Admin</title>
+
+<link rel="stylesheet" type="text/css" href="../../skins/css/public/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="../../skins/css/public/font-awesome.css" />
+<link rel="stylesheet" type="text/css" href="../../skins/css/public/ui.css" />
+<link rel="stylesheet" type="text/css" href="../../skins/css/public/form.css" />
+
+<link rel="stylesheet" type="text/css" href="../../skins/css/main/default.css" />
+<link rel="stylesheet" type="text/css" href="../../skins/css/main/index.css" />
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+     		 <script src="<l:asset path='html5shiv.js'/>"></script>
+     		 <script src="<l:asset path='respond.js'/>"></script>
+    	<![endif]-->
+</head>
+<body>
+
+	<header>
+
+		<nav class="navbar ue-navbar iam-navbar" role="navigation">
+			<div class="navbar-header iam-heading">
+				<a class="navbar-brand iam-logo" href="#">
+					<span>IAM</span>
+				</a>
+			</div>
+
+			<div class="nav navbar-nav navbar-right admin iam-admin">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					<span class="ue-admin-title iam-admin-title">admin</span>
+					<span class="fa fa-caret-down"></span>
+				</a>
+				<ul class="dropdown-menu ue-dropdown-menu iam-dropdown-menu">
+					<li class="ue-dropdown-angle iam-dropdown-angle"></li>
+					<li><a href="#">添加管理员</a></li>
+					<li class="divider"></li>
+					<li><a href="#">退出</a></li>
+				</ul>             
+			</div>
+			
+			<div class="collapse navbar-collapse pull-left">
+				<ul id="myNav" class="nav nav-tabs iam-tabs">
+					<li class="active"><a data-toggle="tab" href="#application"
+						data-bind="../application/application.html"><img src="../../skins/css/img/IAM-app-sl.png"/>应用</a></li>
+					<li><a data-toggle="tab" href="#account"
+						data-bind="../account/account.html"><img src="../../skins/css/img/IAM-account-sl.png"/>账户</a></li>
+					<li><a data-toggle="tab" href="#directory"
+						data-bind="../directory/directory.html"><img src="../../skins/css/img/IAM-dir-sl.png"/>目录</a></li>
+					<li><a data-toggle="tab" href="#group" data-bind="../group/group.html"><img src="../../skins/css/img/IAM-group-sl.png"/>组别</a></li>
+					<li><a data-toggle="tab" href="#organ"
+						data-bind="../organ/organ.html"><img src="../../skins/css/img/IAM-organ-sl.png"/>组织</a></li>
+				</ul>				
+			</div>
+		</nav>	
+
+		<div class="tab-content">
+					<div id="application" class="tab-pane fade in active">
+						<div class="description">
+							<span class="fa fa-cube">应用</span>&nbsp;&nbsp;
+							<span>|</span>&nbsp;&nbsp;
+							<div class="details">
+								<p>账号资源用来管理用户账号。</p>
+							</div>
+						</div>
+					</div>
+					
+					<div id="account" class="tab-pane fade">
+						<div class="description">
+							<span class="fa fa-user">账号</span>&nbsp;&nbsp;
+							<span>|</span>&nbsp;&nbsp;
+							<div class="details">
+								<p>账号资源用来管理用户账号。</p>
+							</div>
+						</div>
+					</div>
+					<div id="directory" class="tab-pane fade">
+						<div class="description">
+							<span class="fa fa-bars">目录</span>&nbsp;&nbsp;
+							<span>|</span>&nbsp;&nbsp;
+							<div class="details">
+								<p>账号资源用来管理用户账号。</p>
+							</div>
+						</div>
+					</div>
+					<div id="group" class="tab-pane fade">
+						<div class="description">
+							<span class="fa fa-users">组</span>&nbsp;&nbsp;
+							<span>|</span>&nbsp;&nbsp;
+							<div class="details">
+								<p>账号资源用来管理用户账号。</p>
+							</div>
+						</div>
+					</div>
+					<div id="organ" class="tab-pane fade">
+						<div class="description">
+							<span class="fa fa-sitemap">组织</span>&nbsp;&nbsp;
+							<span>|</span>&nbsp;&nbsp;
+							<div class="details">
+								<p>账号资源用来管理用户账号。</p>
+							</div>
+						</div>
+					</div>
+
+		</div>
+	</header>
+
+	<div class="content">
+		<div class="fade in" id="resource">
+			<iframe scrolling="yes" frameborder="no" width="100%" height="768px"></iframe>
+		</div>
+
+	</div>
+
+
+	<!-- 需要引用的JS -->
+
+	<script type="text/javascript" src="../../skins/js/public/jquery.js"></script>
+	<script type="text/javascript" src="../../skins/js/public/bootstrap.js"></script>
+	<script type="text/javascript" src="../../skins/js/public/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../../skins/js/public/ui.js"></script>
+	<script type="text/javascript" src="../../skins/js/public/form.js"></script>
+	<script type="text/javascript" src="../../skins/js/public/loushang-framework.js"></script>
+
+	<script type="text/javascript" src="../../skins/js/main/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>IAM CONSOLE</title>
+
+<link rel="stylesheet" type="text/css" href="../../skins/css/public/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="../../skins/css/public/font-awesome.css" />
+<link rel="stylesheet" type="text/css" href="../../skins/css/public/ui.css" />
+<link rel="stylesheet" type="text/css" href="../../skins/css/public/form.css" />
+<link rel="stylesheet" type="text/css" href="../../skins/css/public/datatables.css" />
+
+<link rel="stylesheet" type="text/css" href="../../skins/css/main/default.css" />
+<link rel="stylesheet" type="text/css" href="../../skins/css/application/group.css" />
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+         <script src="<l:asset path='html5shiv.js'/>"></script>
+         <script src="<l:asset path='respond.js'/>"></script>
+      <![endif]-->
+  </head>
+  <body class="groups">
+    
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">组 </a>
+      </div>
+
+      <form class="form-inline navbar-form navbar-right" onsubmit="return false;">
+        <button id="bulkActions" type="button" class="btn ue-btn">
+          批量操作
+        </button>
+        <button id="createPageBtn" type="button" class="btn ue-btn"
+          data-toggle="modal" data-target="#createModal">
+          <span class="fa fa-plus"></span>创建组
+        </button>
+        <input class="ue-form" type="text" placeholder="查询组" id="search1"> 
+        <span class="fa fa-search" id="search2"></span>
+      </form>
+    </nav>
+
+    <!-- 数据展示Table -->
+    <table id="dataList" class="table table-bordered table-hover">
+      <thead>
+        <tr>
+        <th width="5%" data-field="href" data-sortable="false" data-render="rendCheckbox">
+          <input type="checkbox" id="selectGroup" />
+        </th>
+        <th width="20%" data-field="name">组名</th>
+        <th width="30%" data-field="description">描述</th>
+            <th width="15%" data-field="directory.name">目录</th>
+        <th width="15%" data-field="status">状态</th>
+        <th width="75px" data-field="href" data-render="rendBtn">操作</th>
+        </tr>
+      </thead>
+    </table>
+        
+    <!-- 创建组 模态框 -->
+    <div class="modal fade" id="createModal" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+                  <h4 class="modal-title">创建组</h4>
+                </div>
+                
+          <div class="modal-body">
+                  <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label for="directories" class="col-sm-2 control-label">目录</label>
+                    <div class="col-sm-10">
+                      <select class="form-control ue-form" id="directories">
+                      </select>
+                  </div>
+                </div>
+              
+                <div class="form-group">
+                    <label for="name" class="col-sm-2 control-label">组名称</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control ue-form" id="name"/>
+                    </div>
+                </div>
+              
+                <div class="form-group">
+                    <label for="description" class="col-sm-2 control-label">描述</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control ue-form" id="description"/>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                  <label for="status" class="col-sm-2 control-label">状态</label>
+                  <div class="col-sm-10">
+                    <div id="status">
+                      <label class="checkbox-inline">
+                          <input type="radio" name="statusRadio" value="Enabled" checked/> 正常
+                      </label>
+                      <label class="checkbox-inline">
+                          <input type="radio" name="statusRadio" value="Disabled"/> 禁用
+                      </label>
+                    </div>                    
+                  </div>                
+                </div>
+                
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <button type="submit" id="createBtn" class="btn ue-btn-primary">创建</button>
+                      <button type="button" id="createCancelBtn" class="btn ue-btn">取消</button>
+                    </div>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>          
+    </div>
+
+         <!-- Delete 模态框 -->
+    <div class="modal fade" id="delModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"
+            aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title" style="color: red">删除组</h4>
+        </div>
+
+        <div class="modal-body">
+          <form class="form-horizontal" id="appDelForm" role="form">
+            <div class="form-group">
+              <div class="col-sm-12"
+                style="background-color: red; padding: 10px">
+                <p class="form-control-static">删除组？</p>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="checkbox-inline"> <input type="checkbox"
+                id="check01" value="1">我了解组删除不可逆，并同意删除组。
+              </label>
+            </div>
+
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" id="delBtn" class="btn btn-default" style="background-color: red" disabled="disabled">删除</button>
+                <button type="button" id="delCancelBtn" class="btn btn-default">取消</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+    <!-- 需要引用的JS -->
+  <script type="text/javascript" src="../../skins/js/public/jquery.js"></script>
+  <script type="text/javascript" src="../../skins/js/public/bootstrap.js"></script>
+  <script type="text/javascript" src="../../skins/js/public/jquery.cookie.js"></script>
+  <script type="text/javascript" src="../../skins/js/public/ui.js"></script>
+  <script type="text/javascript" src="../../skins/js/public/form.js"></script>
+  <script type="text/javascript" src="../../skins/js/public/datatables.js"></script>
+  <script type="text/javascript" src="../../skins/js/public/loushang-framework.js"></script>
+
+  <script type="text/javascript" src="../../skins/js/application/group.js"></script>
+  </body>
+</html>

@@ -1,0 +1,148 @@
+.iam-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: top;
+	background-color:#f8fafd;
+	overflow: hidden;
+	z-index: -1;
+	font-family: Microsoft yahei;
+}
+
+/******************************************/
+
+.iam-top{
+	background-color: #000;
+	border-bottom: 1px solid #ddd;
+}
+
+.iam-heading {
+    padding-left: 20px;
+}
+
+.iam-logo {
+	padding-left: 170px;
+	line-height: 30px;
+	color: #fff;
+	background-image: url(../img/IAM-logo.png);
+	background-repeat: no-repeat;
+	background-position: 0 bottom;
+}
+
+.iam-logo:hover {
+	color:#fff;
+}
+
+.iam-logo span {
+	font-size: 24px;
+	margin: auto 10px auto 0px;
+}
+
+.iam-nav>li>a {
+    margin-right: 35px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    line-height: 16px;
+    color: #fff;
+    font-size: 16px;
+    border: 1px solid #3e99ff;
+}
+
+.iam-nav>li>a:hover {
+    text-decoration: none;
+    background-color: #000;
+}
+
+/****************************************/
+
+.iam-body {
+	width: 780px;
+	height: auto;
+	padding-top: 50px;
+	margin: auto;
+}
+
+
+/** 1. 布局-中央 **/
+
+.iam-center {
+	width: 450px;
+	background-color:#fff;
+	padding:35px;
+	border:2px;
+	margin:25px auto;
+}
+
+.iam-theme {
+	text-align: center;
+	margin-bottom: 25px;
+	border-bottom: 1px solid #ddd;
+}
+
+
+.iam-theme h4 {
+	margin-top: 0;
+	margin-bottom: 15px;
+	color: #111;
+	font-weight: bold;
+}
+
+
+/** 2. 布局-两边布局 **/
+
+
+.iam-left {
+	width: 320px;
+	height: 320px;
+	margin-right: 150px;
+	margin-left: -110px;
+}
+
+.iam-right {
+	float:right;
+	width: 310px;
+	margin-top: 21px;
+	padding: 25px 30px;
+	background-color:white;
+	border-radius: 2px;
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.31);
+}
+
+
+
+.iam-submit-btn{
+	background-color: #3e99ff;
+    color: #fff;
+    width:100%;
+}
+
+.iam-submit-btn:hover, .iam-submit-btn:focus {
+	background-color: #3e99ff;
+    color: #fff;
+}
+
+
+.iam-form-tail label {
+    margin-top: 12px;
+    margin-left: 150px;
+}
+
+
+
+/************************************/
+
+.iam-bottom {
+	position: absolute;
+	bottom: 0;
+	height: 60px;
+	width: 100%;
+	line-height: 60px;
+	background: #fff;
+	border-top: 1px solid #ddd;
+	color: #999;
+	font-size: 12px;
+	text-align: center;
+}

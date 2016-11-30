@@ -1,0 +1,25 @@
+
+ .form-group {
+ 	margin-bottom: 20px;
+ 	padding-bottom: 20px;
+ }
+
+
+
+
+/***************************************/
+
+
+
+
+.form-checkbox {
+	color: #999;
+	font-size: 12px;
+}
+
+
+.form-forget {
+	float: right;
+	font-size: 12px;
+	color: #00c;
+}

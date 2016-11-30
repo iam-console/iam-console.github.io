@@ -1,0 +1,121 @@
+
+body {
+    overflow-y: hidden;
+}
+
+
+/******************************/
+
+.iam-navbar{
+	background-color: #000;
+}
+
+.iam-heading {
+    margin-top:-5px;
+}
+
+
+/**下拉菜单**/
+
+.iam-navbar .iam-admin {
+    background-color: #333;
+    margin-right: 10px;
+}
+
+.iam-navbar .iam-admin.active.open {
+    background-color: #4e4b4b;
+}
+
+
+.iam-navbar .iam-admin:hover {
+    background-color: #4e4b4b;
+    color: #3e99ff;
+}
+
+.iam-admin .iam-admin-title {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.iam-admin>a {
+    color: #fff;
+}
+
+.iam-dropdown-menu {
+    min-width: 110px;
+    margin-right: 12px;
+}
+
+.iam-dropdown-menu li a {
+    text-align: center;
+}
+
+
+.iam-dropdown-menu .iam-dropdown-angle:before {
+    left: 48px;
+}
+
+.iam-dropdown-menu .iam-dropdown-angle:after {
+    left: 48px;
+}
+
+/**导航条**/
+
+
+.iam-tabs {
+	border:none;
+}
+
+.iam-tabs>li>a {
+    color: #fff;
+    font-size: 16px;
+    line-height: 30px;
+    border:none;
+    border-radius: 0;
+}
+
+.iam-tabs>li.active>a, .iam-tabs>li.active>a:focus, .iam-tabs>li.active>a:hover {
+    color: #ffffff;
+    cursor: default;
+    background-color: #32a5e7;
+    border: none;
+}
+
+.iam-tabs>li>a:focus, .iam-tabs>li>a:hover {
+    background-color: #000;
+}
+
+.iam-tabs>li>a img {
+    margin-right: 3px;
+    margin-top: -2px;
+}
+
+
+/*********************************/
+
+.tab-content>.active {
+    border-bottom: 1px solid #3e99ff;
+}
+
+.description {
+	padding:5px;
+    display: none;
+}
+
+
+.tab-pane span {
+    font-size: 26px;
+    font-weight:bold;
+}
+
+
+
+.tab-pane .details {
+    display: inline-block;
+    font-size:12px;
+}
+
+.content {
+	min-height: 750px;
+}
+

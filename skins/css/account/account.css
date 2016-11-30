@@ -1,0 +1,17 @@
+.ue-menu-wrap {
+	top:0px;
+}
+
+.ue-menu-left ul li input[type="radio"] {
+	margin-right:5px;
+	margin-top:-5px;
+}
+
+.ue-menu-right {
+	overflow:scroll;
+	padding:25px;
+}
+
+.ue-menu-right form {
+	margin-bottom:35px;
+}

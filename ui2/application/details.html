@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+		<title>Application Detail</title>
+
+<link rel="stylesheet" type="text/css" href="../../skins/css/public/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="../../skins/css/public/font-awesome.css" />
+<link rel="stylesheet" type="text/css" href="../../skins/css/public/ui.css" />
+<link rel="stylesheet" type="text/css" href="../../skins/css/public/form.css" />
+<link rel="stylesheet" type="text/css" href="../../skins/css/public/datatables.css" />
+
+<link rel="stylesheet" type="text/css" href="../../skins/css/main/default.css" />
+<link rel="stylesheet" type="text/css" href="../../skins/css/application/details.css" />
+
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+     		 <script src="<l:asset path='html5shiv.js'/>"></script>
+     		 <script src="<l:asset path='respond.js'/>"></script>
+    	<![endif]-->
+	</head>
+	<body>
+
+<div class="view-page-header">
+  
+<h4>细节</h4><span>应用的详细信息。<span/>
+
+</div>
+
+
+<div class="view-page-container">
+
+<form class="form-horizontal" id="appUpdateForm" role="form">
+  
+  <div class="form-group">
+      <label for="appHref" class="col-sm-2 control-label">资源路径</label>
+      <div class="col-sm-10">
+          <a id="appHref" href="#" class="form-control-static" target="_blank"></a>
+       </div>
+  </div>
+                
+  <div class="form-group">
+      <label for="appId" class="col-sm-2 control-label">资源ID</label>
+      <div class="col-sm-10">
+          <span class="form-control-static" id="appId" name="appId"></span>
+      </div>
+  </div>
+                
+   <div class="form-group">
+      <label for="appName" class="col-sm-2 control-label">应用名称</label>
+      <div class="col-sm-10">
+          <input type="text" class="form-control ue-form view-page-form-control" id="appName" name="appName" value="">
+      </div>
+   </div>
+                
+    <div class="form-group">
+        <label for="appDes" class="col-sm-2 control-label">描述</label>
+        <div class="col-sm-10">
+            <textarea class="form-control ue-form view-page-form-textarea" id="appDes" name="description" row="2"></textarea>
+        </div>
+    </div>
+
+    <div class="form-group">
+                    <label for="appStatus" class="col-sm-2 control-label">状态</label>
+                    <div class="col-sm-10">
+                      <div id="appStatus" class="radio">
+                        <label><input type="radio" name="statusRadio" value="enabled" checked>启动</label>
+                        <label><input type="radio" name="statusRadio" value="disabled">停止</label>
+                      </div>
+                    </div>
+    </div>
+                
+    <div class="form-group">
+                      <label for="customData" class="col-sm-2 control-label">自定义数据</label>
+                      <div class="col-sm-10">
+                        <textarea class="form-control ue-form view-page-form-textarea" id="customData" name="customData" row="3" ></textarea>
+                      </div>
+    </div>                              
+                
+    <div class="form-group">
+                      <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" id="saveBtn" class="btn ue-btn-primary">保存</button>
+                      </div>
+    </div>
+  </form>
+  
+</div>
+
+ 
+
+		
+      
+        
+		<!-- 需要引用的JS -->
+  <script type="text/javascript" src="../../skins/js/public/jquery.js"></script>
+  <script type="text/javascript" src="../../skins/js/public/bootstrap.js"></script>
+  <script type="text/javascript" src="../../skins/js/public/jquery.cookie.js"></script>
+  <script type="text/javascript" src="../../skins/js/public/ui.js"></script>
+  <script type="text/javascript" src="../../skins/js/public/form.js"></script>
+  <script type="text/javascript" src="../../skins/js/public/datatables.js"></script>
+  <script type="text/javascript" src="../../skins/js/public/loushang-framework.js"></script>
+
+  <script type="text/javascript" src="../../skins/js/application/details.js"></script>
+
+	</body>
+</html>

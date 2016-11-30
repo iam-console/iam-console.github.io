@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>demo-1</title>
+</head>
+<body>
+<div id="n1">
+    <div id="n2">
+        <ul id="n3">
+            <li id="n4">item1</li>
+            <li id="n5">item2</li>
+            <li id="n6">item3</li>
+        </ul>
+    </div>  
+</div>
+<form id="demoForm">
+    <input name="goods_weight" type="checkbox" value="20">A(20kg)<br>
+    <input name="goods_weight" type="checkbox" value="33">B(33kg)<br>
+    <input name="goods_weight" type="checkbox" value="36">C(36kg)<br>
+    <input name="goods_weight" type="checkbox" value="49">D(49kg)<br>
+    <input name="goods_weight" type="checkbox" value="56">E(56kg)<br>
+    <input name="goods_weight" type="checkbox" value="78">F(78kg)<br>
+    <input id="btnBuy" type="button" value="订购">    
+</form>
+
+
+	<script type="text/javascript" src="../skins/js/public/jquery.js"></script>
+
+	<script type="text/javascript">
+		
+		$("ul li").each(function(index, element){
+    	// this === element
+    	$(element).html( "编号" + (index + 1) );  
+		});
+
+
+$("#btnBuy").click(function(){
+    var weight = 0;
+    $("[name=goods_weight]:checked").each(function(){
+        weight += parseInt(this.value);
+        if(weight > 100){ // 重量超标，停止循环
+            return false;
+        }
+    });
+    if(weight <= 0){
+        alert("没有选择任何商品!");
+    }else if(weight > 100){
+        alert("一次订购的商品重量不能超过100kg!");
+    }else{
+        // 订购商品
+        alert("订购商品成功!");
+    }
+});
+	</script>
+
+</body>
+</html>
