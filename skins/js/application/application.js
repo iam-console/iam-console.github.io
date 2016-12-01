@@ -31,7 +31,7 @@ $(function() {
 function initContext(){
 
 	if(context==null){
-		context="http://dev.imaicloud.com/iam";
+		context="http://localhost:8080/iam-rest-maven";
 	}
 }
 
