@@ -1,5 +1,5 @@
 {
-	"protocol":"http",
+	"protocol":"https",
 	"host":"dev.imaicloud.com",
 	"port":"80",
 	"context":"/iam",
