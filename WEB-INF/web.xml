@@ -2,12 +2,10 @@
 <!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
  <web-app>	
 	<!-- 指定Web应用的定义名称 -->
-	<display-name>iam-admin</display-name>
-
-	
+	<display-name>iam-admin</display-name>	
 	
 	<welcome-file-list>
-		<welcome-file>ui2/main/login.html</welcome-file>
+		<welcome-file>login.html</welcome-file>
 	</welcome-file-list> 
 
 </web-app>

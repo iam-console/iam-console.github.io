@@ -13,7 +13,7 @@ $(function() {
 function initContext(){
 
 	if(URL==null){
-		$.getJSON("../data/iam-admin.json",function(data){	
+		$.getJSON("data/iam-admin.json",function(data){	
 
 		protocol=data["protocol"];
 		host=data["host"];

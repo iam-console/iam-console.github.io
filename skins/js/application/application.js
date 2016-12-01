@@ -6,6 +6,8 @@ var context=$.cookie("URL");
 
 $(function() {
 
+	initContext();
+
 	initTable();
 	
 	initCreateModal();
@@ -26,6 +28,13 @@ $(function() {
 
 
 //////////////////////////////////////////////////  表格      /////////////////////////////////////////////////
+function initContext(){
+
+	if(context==null){
+		context="http://dev.imaicloud.com/iam";
+	}
+}
+
 function initTable() {
 	var options = {
 		ordering : false
